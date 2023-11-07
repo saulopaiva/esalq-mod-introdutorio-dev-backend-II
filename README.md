@@ -75,6 +75,12 @@ Criar um arquivo txt com as dependências do projeto
 pip freeze > requirements.txt
 ```
 
+Para criar a pasta de setup do projeto (local onde estão todas as configurações)
+
+```
+django-admin startproject setup .
+```
+
 Para executar o servidor Django
 
 ```
@@ -121,4 +127,46 @@ Para executar o servidor FastAPI
 
 ```
 uvicorn app:app --host 0.0.0.0 --port 8080 --reload
+```
+
+
+# Personal
+
+```
+root@cce77806ecef:/# cd aula/src/
+root@cce77806ecef:/aula/src# mkdir django-products
+root@cce77806ecef:/aula/src# cd django-products/
+
+## Install venv
+root@cce77806ecef:/aula/src/django-products# python -m venv ./venv
+root@cce77806ecef:/aula/src/django-products# source venv/bin/activate
+(venv) root@cce77806ecef:/aula/src/django-products# ls
+venv
+(venv) root@cce77806ecef:/aula/src/django-products# 
+
+## Install django
+(venv) root@cce77806ecef:/aula/src/django-products# pip install django
+
+## Verify installation
+(venv) root@cce77806ecef:/aula/src/django-products# pip freeze
+asgiref==3.7.2
+Django==4.2.7
+sqlparse==0.4.4
+
+## Dependencies to requirements.txt
+(venv) root@cce77806ecef:/aula/src/django-products# pip freeze > requirements.txt
+
+## Create the *project* with the config files
+(venv) root@cce77806ecef:/aula/src/django-products# django-admin startproject setup .
+
+## Run server
+(venv) root@cce77806ecef:/aula/src/django-products# python manage.py runserver 0.0.0.0:8000
+
+## Create *APP*
+(venv) root@cce77806ecef:/aula/src/django-products# python manage.py startapp product
+>> editar o seteup/settings.py e adiciona o APP criado
+
+
+
+
 ```
