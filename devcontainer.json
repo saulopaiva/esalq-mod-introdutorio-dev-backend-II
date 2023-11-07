@@ -1,0 +1,22 @@
+{
+    // Default path to open when attaching to a new container.
+    "workspaceFolder": "./",
+  
+    // An array port numbers to forward
+    "forwardPorts": [8000, 8081],
+  
+    // Container user VS Code should use when connecting
+    "remoteUser": "vscode",
+
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "ms-python.python",
+                "ms-python.vscode-pylance"
+            ]
+        }
+    },
+  
+    // Set environment variables for VS Code and sub-processes
+    "remoteEnv": { "MY_VARIABLE": "some-value" }
+  }
